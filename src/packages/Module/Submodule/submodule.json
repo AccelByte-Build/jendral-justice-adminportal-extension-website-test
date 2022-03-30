@@ -1,0 +1,10 @@
+{
+  "id": "example-1-submodule",
+  "title": "module.example.submodule.example-1-submodule.title",
+  "isEnabled": true,
+  "permission": {
+    "resource": "ADMIN:NAMESPACE:{namespace}:USER:*",
+    "action": 2
+  },
+  "allowedNamespaces": ["accelbyte"]
+}

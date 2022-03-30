@@ -1,0 +1,12 @@
+# Copyright (c) 2021 AccelByte Inc. All Rights Reserved.
+# This is licensed software from AccelByte Inc, for limitations
+# and restrictions contact your company contract manager.
+
+FROM accelbyte/node:12-alpine
+
+RUN apk update && \
+    apk add --no-cache --virtual g++ make python2 && \
+    apk add yarn bash git openssh
+
+RUN mkdir -p /root/.ssh; \
+  ssh-keyscan bitbucket.org >> /root/.ssh/known_hosts
